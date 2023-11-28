@@ -1,11 +1,14 @@
-ABOUT
+ABOUT:
+
 In this project, I construct an interactive dashboard designed to explore the Belly Button Biodiversity dataset, which meticulously documents the microbial communities inhabiting human navels. This dataset unveils intriguing insights, indicating that a select few microbial species, referred to as operational taxonomic units (OTUs) in the study, are prevalent in over 70% of individuals, with the remaining species being comparatively rare. The interactive dashboard will serve as a user-friendly platform to delve into this fascinating dataset and gain a deeper understanding of the diverse microbial life found in human navels.
 
-TOOLS
+TOOLS:
+
 Jarvis script 
 D3 Library
 
-PROCESS
+PROCESS:
+
 1. Use the D3 library to read in samples.json from the URL
 2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 3. Create a bubble chart that displays each sample.
