@@ -4,9 +4,9 @@ In this project, I construct an interactive dashboard designed to explore the Be
 
 TOOLS:
 
-Jarvis script 
+-Jarvis script 
 
-D3 Library
+-D3 Library
 
 PROCESS:
 
