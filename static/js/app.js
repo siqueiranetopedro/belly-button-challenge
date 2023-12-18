@@ -28,15 +28,16 @@ function buildCharts(x) {
     let samples = data.samples;
     console.log(samples);
 
+    let results = samples.find(item => item.id == x);
 
-    let otu_ids = samples.map(sample => sample.otu_ids);
-    let otu_labels = samples.map(sample => sample.otu_labels);
-    let sample_values = samples.map(sample => sample.sample_values);
+    let otu_ids = results.otu_ids;
+    let otu_labels = results.otu_labels;
+    let sample_values = results.sample_values;
     console.log(otu_ids, otu_labels, sample_values);
 
-    let yticks = otu_ids[0].slice(0, 10).map(id => `OTU ${id}`).reverse();
-    let xticks = sample_values[0].slice(0, 10).reverse();
-    let labels = otu_labels[0].slice(0, 10).reverse();
+    let yticks = otu_ids.slice(0, 10).map(id => `OTU ${id}`).reverse();
+    let xticks = sample_values.slice(0, 10).reverse();
+    let labels = otu_labels.slice(0, 10).reverse();
 
     let trace = {
       x: xticks,
@@ -57,11 +58,11 @@ function buildBubbleChart(x) {
   d3.json(url).then(function (data) {
     let samples = data.samples;
     console.log(samples);
-
+    let results = samples.find(item => item.id == x);
    
-    let otu_ids = samples.map(sample => sample.otu_ids)[0]; 
-    let sample_values = samples.map(sample => sample.sample_values)[0];
-    let otu_labels = samples.map(sample => sample.otu_labels)[0];
+    let otu_ids = results.otu_ids; 
+    let sample_values = results.sample_values;
+    let otu_labels = results.otu_labels;
 
    
     let trace1 = {
